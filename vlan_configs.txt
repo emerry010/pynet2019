@@ -1,0 +1,12 @@
+vlan 100
+name data
+vlan 101
+name phones
+vlan 102
+name guest
+vlan 103
+name dmz
+vlan 104
+name internal
+vlan 105
+name external
