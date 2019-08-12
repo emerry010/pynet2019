@@ -1,0 +1,18 @@
+from netmiko import ConnectHandler
+from getpass import getpass
+from datetime import time, timedelta, datetime
+from pprint import pprint 
+import csv
+
+
+with open('arp_data.txt', 'r') as f:
+    next(f)
+    r = csv.reader(f, delimiter=" ")
+    d = dict((int(row[0]), map(int,row[1:])) for row in r)
+    print(d)
+
+
+
+
+
+
