@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 from getpass import getpass
 from datetime import time, timedelta, datetime
 from pprint import pprint 
-
+import yaml
 
 cisco3 = {"device_name": "cisco3", "host": "cisco3.lasthop.io"}
 
@@ -24,6 +24,8 @@ pprint(myDevices)
 print()
 
 
+with open("myDevices.yml", "w") as f:
+    yaml.dump(myDevices, f, default_flow_style=False) 
 
 
 
